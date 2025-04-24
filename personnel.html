@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter Personnel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="conteneur-personnel">
+
+        <h1>PERSONNEL MANAGEMENT</h1>
+    </div>
+        <form method="POST" action="{{ url_for('add_personnel') }}">
+
+            <div class="formulaire-ajout">
+            <label for="nom">Name :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="prenom">Surname :</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <label for="poste">Workstation :</label>
+            <input type="text" id="poste" name="poste" required>
+
+            <label for="service">Service :</label>
+            <input type="text" id="service" name="service" required>
+            
+            <label for="service">Salary :</label>
+            <input type="text" id="salaire" name="salaire" required>
+            
+            <label for="date_recrutement">Recruitment date :</label>
+            <input type="date" id="date_recrutement" name="date_recrutement">
+
+        </div>
+            
+            <div class="button-group">
+                
+                <a href="{{ url_for('add_personnel') }}" class="button-link cancel-button">add</a>
+                <a href="{{ url_for('edit_personnel') }}" class="button-link cancel-button">edit</a>
+                
+                 <button type="button" class="cancel-button">cancel</button> 
+            </div>
+
+        </form>
+
+    </div> </body>
+</html>

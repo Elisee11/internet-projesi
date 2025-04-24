@@ -1,0 +1,660 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(252, 249, 247);
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: black;
+}
+
+.logo {
+    font-size: 28px;
+    color: rgb(255, 72, 0);
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: rgb(244, 242, 241);
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 8px 14px;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: rgb(241, 95, 5);
+    color: black;
+}
+
+.main-content {
+    text-align: center;
+    margin-top: 180px;
+}
+
+.main-content h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: rgb(9, 9, 9);
+}
+
+.main-content .buttons a {
+    color: rgb(251, 248, 245);
+    border: 1px solid white;
+    padding: 12px 25px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.main-content .buttons a:hover {
+    background-color: white;
+    color: black;
+}
+
+
+.container {
+    padding:0px 0px ;
+    color: rgb(250, 243, 243);
+    background-color: black;
+}
+
+
+
+
+
+/* --- Styles pour un Formulaire de Connexion Original --- */
+
+/* Conteneur principal du formulaire - ajoutez cette classe à votre div HTML */
+.custom-login-form {
+    max-width: 200px; /* Largeur */
+    margin: 40px auto; /* Centrer et espace en haut */
+    padding: 90px; /* Espacement intérieur généreux */
+    background: linear-gradient(135deg, #f46302, #f5f4f3); /* Dégradé de fond */
+    border-radius: 15px; /* Bords très arrondis */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée */
+    text-align: center; /* Centrer le texte à l'intérieur */
+}
+
+.custom-login-form h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #0c0b0b;
+    font-size: 2em;
+    font-family: 'Arial', sans-serif; /* Exemple de police */
+}
+
+/* Styles pour les champs de saisie */
+.custom-login-form input[type="text"],
+.custom-login-form input[type="password"] {
+    width: calc(100% - 20px); /* Largeur avec espace pour padding */
+    padding: 10px 12px; /* Espacement intérieur */
+    margin-bottom: 20px; /* Espace sous le champ */
+    border: 1px solid #bbb; /* Bordure */
+    border-radius: 8px; /* Coins arrondis */
+    box-sizing: border-box;
+    font-size: 1.1em;
+    transition: border-color 0.3s ease;
+}
+
+/* Style au focus (quand le champ est sélectionné) */
+.custom-login-form input[type="text"]:focus,
+.custom-login-form input[type="password"]:focus {
+    border-color: #36e155; /* Bordure bleue */
+    outline: none; /* Supprimer l'outline par défaut */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2); /* Ombre légère */
+}
+
+/* Styles pour le bouton */
+.custom-login-form button[type="submit"] {
+    width: calc(100% - 20px); /* Largeur */
+    padding: 12px 10px;
+    background-color: #089d3c; /* Vert (exemple, vous pouvez changer) */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Coins arrondis */
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Transitions */
+}
+
+/* Style au survol du bouton */
+.custom-login-form button[type="submit"]:hover {
+    background-color: #218838; /* Vert plus foncé */
+}
+
+/* Style au clic du bouton */
+.custom-login-form button[type="submit"]:active {
+    transform: scale(0.98); /* Rétracter légèrement au clic */
+}
+
+/* Optionnel: Styles pour les placeholders */
+.custom-login-form input::placeholder {
+    color: #0e0d0d;
+    opacity: 1; /* S'assurer qu'il est visible */
+}
+
+/* Styles spécifiques au conteneur de la page d'inscription */
+#registration-page-container {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f0ee; /* Couleur de fond de la page d'inscription */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Pour centrer le contenu de ce conteneur */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Le conteneur prend au moins toute la hauteur de la fenêtre */
+    line-height: 1.6;
+    color: #0c0b0b;
+    /* Assurez-vous que votre CSS global ou par défaut n'ajoute pas de marge/padding au body qui perturberait ce flexbox */
+    /* Un style global "body { margin: 0; padding: 0; }" est souvent utile */
+}
+
+/* Styles pour l'en-tête UNIQUEMENT DANS la page d'inscription */
+#registration-page-container header {
+    background-color: #0f0601;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    /* Positionnement fixe spécifique à cette page */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#registration-page-container header h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: normal;
+}
+
+/* Styles pour le conteneur du formulaire UNIQUEMENT DANS la page d'inscription */
+#registration-page-container .form-container {
+    background-color: #fefefd;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 450px;
+    margin-top: 70px; /* Espace pour l'en-tête fixe */
+    position: relative;
+    overflow: hidden;
+    opacity: 0; /* État initial pour l'animation */
+    transform: translateY(20px); /* État initial pour l'animation */
+    animation: fadeInForm 0.6s ease-out forwards; /* Appliquer l'animation */
+}
+
+/* Définition de l'animation (globale, mais appliquée spécifiquement) */
+@keyframes fadeInForm {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styles pour le titre h2 du formulaire UNIQUEMENT DANS la page d'inscription */
+#registration-page-container .form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #fb3605;
+    font-size: 24px;
+    border-bottom: 2px solid #f35506;
+    padding-bottom: 15px;
+}
+
+/* Styles pour les groupes de formulaire UNIQUEMENT DANS la page d'inscription */
+#registration-page-container .form-group {
+    margin-bottom: 20px;
+}
+
+/* Styles pour les labels UNIQUEMENT DANS la page d'inscription */
+#registration-page-container .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+    font-size: 15px;
+}
+
+/* Styles pour les champs de saisie UNIQUEMENT DANS la page d'inscription */
+#registration-page-container .form-group input[type="text"],
+#registration-page-container .form-group input[type="email"],
+#registration-page-container .form-group input[type="password"],
+#registration-page-container .form-group input[type="tel"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Styles de focus pour les champs de saisie UNIQUEMENT DANS la page d'inscription */
+#registration-page-container .form-group input[type="text"]:focus,
+#registration-page-container .form-group input[type="email"]:focus,
+#registration-page-container .form-group input[type="password"]:focus,
+#registration-page-container .form-group input[type="tel"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Styles pour le bouton d'envoi UNIQUEMENT DANS la page d'inscription */
+#registration-page-container button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles de survol pour le bouton UNIQUEMENT DANS la page d'inscription */
+#registration-page-container button[type="submit"]:hover {
+    background-color: #218838;
+    transform: translateY(-1px);
+}
+
+/* Styles de clic pour le bouton UNIQUEMENT DANS la page d'inscription */
+#registration-page-container button[type="submit"]:active {
+    background-color: #1e7e34;
+    transform: translateY(0);
+}
+
+/* Styles des liens optionnels UNIQUEMENT DANS la page d'inscription */
+#registration-page-container a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#registration-page-container a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Style pour le texte placeholder UNIQUEMENT DANS les champs de saisie de la page d'inscription */
+#registration-page-container ::placeholder {
+    color: #aaa;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+/* Styles pour le titre à l'intérieur du conteneur */
+.conteneur-personnel h1 {
+    color: #333; /* Couleur de texte foncée */
+    text-align: center; /* Centre le texte */
+    margin-bottom: 30px; /* Espace sous le titre */
+    font-size: 1.8em; /* Taille de police plus grande */
+    border-bottom: 2px solid #f0f0f0; /* Ligne de séparation sous le titre */
+    padding-bottom: 15px;
+}
+
+/* Styles pour le formulaire en lui-même */
+.conteneur-personnel form {
+    display: flex;
+    flex-direction: column; /* Organise les éléments du formulaire en colonne */
+}
+
+/* Styles pour le groupe de champs de formulaire (Nom, Prénom, etc.) */
+.formulaire-ajout {
+    display: grid; /* Utilise Grid pour un alignement plus facile */
+    grid-template-columns: 1fr 2fr; /* Une colonne pour les labels, deux pour les inputs */
+    gap: 20px; /* Espace entre les éléments de la grille */
+    margin-bottom: 30px; /* Espace sous le formulaire */
+    align-items: center; /* Alignement vertical au centre */
+}
+
+/* Styles pour les labels */
+.formulaire-ajout label {
+    font-weight: bold; /* Texte en gras */
+    color: #555; /* Couleur de texte un peu plus claire */
+    text-align: right; /* Aligne le texte du label à droite */
+    padding-right: 10px; /* Petit espace entre le label et l'input */
+}
+
+/* Styles pour les champs de saisie (input) */
+.formulaire-ajout input[type="text"],
+.formulaire-ajout input[type="date"] {
+    width: 100%; /* Prend toute la largeur de sa colonne */
+    padding: 12px; /* Espacement intérieur */
+    border: 1px solid #ccc; /* Bordure standard */
+    border-radius: 4px; /* Coins légèrement arrondis */
+    font-size: 1em; /* Taille de police cohérente */
+    box-sizing: border-box; /* Inclut padding et border dans la largeur totale */
+    transition: border-color 0.3s ease-in-out; /* Transition douce sur la bordure */
+}
+
+/* Style au focus sur les champs de saisie */
+.formulaire-ajout input[type="text"]:focus,
+.formulaire-ajout input[type="date"]:focus {
+    border-color: #007bff; /* Bordure bleue au focus */
+    outline: none; /* Supprime le contour par défaut */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25); /* Ombre légère au focus */
+}
+
+/* Styles pour le groupe de boutons */
+.button-group {
+    text-align: center; /* Centre les boutons */
+    margin-top: 20px; /* Espace au-dessus des boutons */
+    display: flex; /* Utilise Flexbox pour aligner les boutons */
+    justify-content: center; /* Centre les éléments flex sur l'axe principal */
+    gap: 15px; /* Espace entre les boutons */
+}
+
+/* Styles pour tous les boutons et liens stylisés en bouton dans ce groupe */
+.button-group button,
+.button-group .button-link {
+    padding: 12px 25px; /* Espacement intérieur des boutons */
+    border: none; /* Pas de bordure par défaut */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointer au survol */
+    font-size: 1em; /* Taille de police */
+    transition: background-color 0.3s ease; /* Transition douce sur la couleur de fond */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    display: inline-block; /* Permet d'appliquer padding et margin correctement aux liens */
+}
+
+/* Style spécifique pour le bouton "Ajouter" (type="submit") */
+.button-group button[type="submit"] {
+    background-color: #28a745; /* Vert pour l'action positive */
+    color: white; /* Texte blanc */
+}
+
+/* Style au survol du bouton "Ajouter" */
+.button-group button[type="submit"]:hover {
+    background-color: #218838; /* Vert un peu plus foncé au survol */
+}
+
+/* Style pour les boutons/liens "Annuler" */
+/* Note : vous avez deux boutons "Annuler", j'applique le style à la classe cancel-button */
+.button-group .cancel-button {
+    background-color: #dc3545; /* Rouge pour l'action négative/annuler */
+    color: white; /* Texte blanc */
+}
+
+
+/* Style au survol des boutons/liens "Annuler" */
+.button-group .cancel-button:hover {
+    background-color: #c82333; /* Rouge un peu plus foncé au survol */
+}
+
+/* Optionnel : Style pour les liens "Annuler" pour qu'ils ressemblent vraiment à des boutons */
+/* Vous aviez un lien <a> avec la classe button-link et cancel-button, ce style s'applique */
+.button-group .button-link.cancel-button {
+    background-color: #4f5554; /* Gris pour une action secondaire */
+    color: white;
+}
+
+.button-group .button-link.cancel-button:hover {
+     background-color: #5a6268; /* Gris un peu plus foncé au survol */
+}
+
+/* Ajustement pour le duplicate "Annuler" - Vous devriez probablement enlever un des deux boutons Annuler dans votre HTML */
+/* Si vous gardez les deux, le style ci-dessus s'appliquera à la fois au bouton et au lien *
+
+}
+
+/* Styles pour le titre à l'intérieur du conteneur */
+.conteneur-personnel h1 {
+    color: #ef4209; /* Couleur de texte foncée */
+    text-align: center; /* Centre le texte */
+    margin-bottom: 30px; /* Espace sous le titre */
+    font-size: 1.8em; /* Taille de police plus grande */
+    border-bottom: 2px solid #0e0e0e; /* Ligne de séparation sous le titre */
+    padding-bottom: 15px;
+}
+
+/* Styles pour le formulaire en lui-même */
+.conteneur-personnel form {
+    display: flex;
+    flex-direction: column; /* Organise les éléments du formulaire en colonne */
+    
+}
+
+/* Styles pour le groupe de champs de formulaire (Nom, Prénom, etc.) */
+.formulaire-ajout {
+    display: grid; /* Utilise Grid pour un alignement plus facile */
+    grid-template-columns: 1fr 2fr; /* Une colonne pour les labels, deux pour les inputs */
+    gap: 20px; /* Espace entre les éléments de la grille */
+    margin-bottom: 30px; /* Espace sous le formulaire */
+    align-items: center; /* Alignement vertical au centre */
+}
+
+/* Styles pour les labels */
+.formulaire-ajout label {
+    font-weight: bold; /* Texte en gras */
+    color: #0d0d0d; /* Couleur de texte un peu plus claire */
+    text-align: right; /* Aligne le texte du label à droite */
+    padding-right: 10px; /* Petit espace entre le label et l'input */
+}
+
+/* Styles pour les champs de saisie (input) */
+.formulaire-ajout input[type="text"],
+.formulaire-ajout input[type="date"] {
+    width: 100%; /* Prend toute la largeur de sa colonne */
+    padding: 12px; /* Espacement intérieur */
+    border: 1px solid #ccc; /* Bordure standard */
+    border-radius: 4px; /* Coins légèrement arrondis */
+    font-size: 1em; /* Taille de police cohérente */
+    box-sizing: border-box; /* Inclut padding et border dans la largeur totale */
+    transition: border-color 0.3s ease-in-out; /* Transition douce sur la bordure */
+}
+
+/* Style au focus sur les champs de saisie */
+.formulaire-ajout input[type="text"]:focus,
+.formulaire-ajout input[type="date"]:focus {
+    border-color: #007bff; /* Bordure bleue au focus */
+    outline: none; /* Supprime le contour par défaut */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25); /* Ombre légère au focus */
+}
+
+/* Styles pour le groupe de boutons */
+.button-group {
+    text-align: center; /* Centre les boutons */
+    margin-top: 20px; /* Espace au-dessus des boutons */
+    display: flex; /* Utilise Flexbox pour aligner les boutons */
+    justify-content: center; /* Centre les éléments flex sur l'axe principal */
+    gap: 15px; /* Espace entre les boutons */
+}
+
+/* Styles pour tous les boutons et liens stylisés en bouton dans ce groupe */
+.button-group button,
+.button-group .button-link {
+    padding: 12px 25px; /* Espacement intérieur des boutons */
+    border: none; /* Pas de bordure par défaut */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointer au survol */
+    font-size: 1em; /* Taille de police */
+    transition: background-color 0.3s ease; /* Transition douce sur la couleur de fond */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    display: inline-block; /* Permet d'appliquer padding et margin correctement aux liens */
+}
+
+
+
+
+
+/* Style pour les boutons/liens "Annuler" */
+/* Note : vous avez deux boutons "Annuler", j'applique le style à la classe cancel-button */
+.button-group .cancel-button {
+    background-color: #e30909; /* Rouge pour l'action négative/annuler */
+    color: white; /* Texte blanc */
+}
+
+/* Style au survol des boutons/liens "Annuler" */
+.button-group .cancel-button:hover {
+    background-color: #c82333; /* Rouge un peu plus foncé au survol */
+}
+
+/* Optionnel : Style pour les liens "Annuler" pour qu'ils ressemblent vraiment à des boutons */
+/* Vous aviez un lien <a> avec la classe button-link et cancel-button, ce style s'applique */
+.button-group .button-link.cancel-button {
+    background-color: #0b8705; /* Gris pour une action secondaire */
+    color: white;
+}
+
+.button-group .button-link.cancel-button:hover {
+     background-color: #5a6268; /* Gris un peu plus foncé au survol */
+}
+
+/* Ajustement pour le duplicate "Annuler" - Vous devriez probablement enlever un des deux boutons Annuler dans votre HTML */
+/* Si vous gardez les deux, le style ci-dessus s'appliquera à la fois au bouton et au lien */
+
+
+
+/* Styles Généraux pour un fond de page blanc et texte par défaut */
+/* Ceci assure que même en dehors du formulaire, le fond est blanc */
+bodyadd {
+    background-color: hsl(156, 12%, 92%); /* Un blanc très légèrement cassé pour un peu de douceur */
+    color: #141313; /* Couleur de texte générale foncée */
+    line-height: 1.6; /* Améliore la lisibilité du texte */
+    font-family: 'Roboto', sans-serif; /* Utilise une police moderne (assurez-vous de l'inclure via <link> dans votre HTML si vous ne l'avez pas) */
+    margin: 0px; /* Supprime la marge par défaut du body */
+    padding: 20px; /* Ajoute un padding général autour du contenu */
+}
+
+/* Importation de la police Roboto si vous ne l'avez pas déjà */
+/* Ajoutez ceci dans la section <head> de votre HTML : */
+/* <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> */
+
+
+/* Styles spécifiques pour le conteneur du formulaire Ajouter Personnel */
+/* Cibler par les classes Bootstrap pour la spécificité */
+.container.mt-5 {
+    background-color: #ffffff; /* Fond blanc pur pour le conteneur du formulaire */
+    padding: 40px; /* Augmente l'espace intérieur */
+    border-radius: 10px; /* Coins plus arrondis */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Ombre plus douce et étendue */
+    margin-top: 50px !important; /* Assure un bon espacement en haut */
+    margin-bottom: 50px; /* Espacement en bas */
+}
+
+/* Styles pour le titre à l'intérieur du conteneur */
+.container.mt-5 h2 {
+    color: #f64905; /* Une couleur foncée élégante */
+    text-align: center;
+    margin-bottom: 35px; /* Plus d'espace sous le titre */
+    font-size: 2em; /* Taille de police plus grande pour le titre */
+    font-weight: 700; /* Titre en gras */
+    position: relative; /* Permet de positionner un pseudo-élément */
+}
+
+/* Petite ligne décorative sous le titre */
+.container.mt-5 h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #010509; /* Couleur de la ligne (bleu Bootstrap par défaut) */
+    margin: 15px auto 0; /* Centre la ligne sous le titre */
+    border-radius: 2px;
+}
+
+
+/* Espacement et alignement pour les groupes de formulaire */
+.container.mt-5 .form-group {
+    margin-bottom: 25px; /* Augmente l'espace entre les champs */
+}
+
+/* Styles pour les labels */
+.container.mt-5 .form-group label {
+    font-weight: 500; /* Poids de police moyen */
+    color: #0e0101;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.05em; /* Taille de police légèrement plus grande pour les labels */
+}
+
+/* Styles pour les inputs et le champ de date */
+.container.mt-5 .form-group .form-control {
+    border-radius: 5px;
+    border: 1px solid #000407; /* Bordure subtile */
+    padding: 12px 15px; /* Ajuster le padding */
+    font-size: 1em;
+    color: #0a0000;
+    background-color: #f8f9fa; /* Fond très léger pour les inputs */
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Style au focus sur les inputs */
+.container.mt-5 .form-group .form-control:focus {
+    border-color: #007bff; /* Bordure bleue au focus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2); /* Ombre bleue plus douce au focus */
+    background-color: #fff; /* Fond blanc au focus */
+}
+
+/* Styles pour les boutons */
+.container.mt-5 .btn {
+    padding: 12px 30px; /* Espacement intérieur */
+    border-radius: 25px; /* Boutons pill (plus arrondis) */
+    font-size: 1.05em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-right: 15px;
+    text-transform: uppercase; /* Texte en majuscules */
+    letter-spacing: 0.5px; /* Espacement des lettres */
+}
+
+/* Ajustement du margin-top Bootstrap */
+.container.mt-5 .btn.mt-2 {
+    margin-top: 30px !important; /* Plus d'espace au-dessus des boutons */
+}
+
+
+/* Style spécifique pour le bouton Ajouter */
+.container.mt-5 .btn-primary {
+    background-color: #2faf4d; /* Vert pour l'action positive */
+    border-color: #28a745;
+    color: #f5f4f3;
+}
+
+/* Style au survol du bouton Ajouter */
+.container.mt-5 .btn-primary:hover {
+    background-color: #218838; /* Vert plus foncé */
+    border-color: #2b9a45;
+    transform: translateY(-2px); /* Petit effet de translation au survol */
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2); /* Ombre au survol */
+    
+}
+
+/* Style spécifique pour le bouton Annuler */
+.container.mt-5 .btn-secondary {
+    background-color: #c80606; /* Gris secondaire */
+    border-color: #be0606;
+    color: #fbfcfc;
+}
+
+/* Style au survol du bouton Annuler */
+.container.mt-5 .btn-secondary:hover {
+    background-color: #636465; /* Gris plus foncé */
+    border-color: #545b62;
+    transform: translateY(-2px); /* Petit effet de translation au survol */
+    box-shadow: 0 4px 10px rgba(108, 117, 125, 0.2); /* Ombre au survol */
+}
+
+/* Rendre le lien Annuler (s'il est utilisé) stylisé comme un bouton */
+.container.mt-5 a.btn {
+    text-decoration: none;
+    display: inline-block;
+}

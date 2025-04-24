@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Work Center - Accueil</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="homepage">
+    <nav class="navbar">
+        <div class="logo">WORK<span>CENTER</span></div>
+        <div class="nav-links">
+            <a href="{{ url_for('login') }}">CONNEXION</a>
+            <a href="{{ url_for('logout') }}">DISCONNECT</a>
+            <a href="{{ url_for('register') }}">REGISTRATION</a>
+            <a href="{{ url_for('personnel') }}"> PERSONNEL MANAGEMENT</a>
+
+        </div>
+
+    </nav>
+    <main class="main-content">
+        <h1>WORK SPACE </h1>
+        
+    </main>
+</body>
+</html>

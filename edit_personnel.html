@@ -1,0 +1,30 @@
+<head>
+    <meta charset="UTF-8">
+    <title>EDIT PERSONAL</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<div class="container mt-5">
+    <h2 class="text-white">EDIT PERSONAL</h2>
+    <form method="POST">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" name="nom" class="form-control" value="  " required>
+        </div>
+        <div class="form-group">
+            <label>Surname</label>
+            <input type="text" name="prenom" class="form-control" value=" " required>
+        </div>
+        <div class="form-group">
+            <label>Workstation</label>
+            <input type="text" name="poste" class="form-control" value=" " required>
+        </div>
+        <div class="form-group">
+            <label>Service</label>
+            <input type="text" name="service" class="form-control" value="  " required>
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">Save</button>
+        <a href="{{ url_for('personnel') }}" class="btn btn-secondary mt-2">Cancel</a>
+    </form>
+</div>
+
